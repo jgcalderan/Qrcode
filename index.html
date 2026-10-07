@@ -9,7 +9,6 @@ name="viewport"
 content="width=device-width, initial-scale=1.0"
 >
  
-<!-- Ajuda a impedir o uso de versões antigas da página -->
 <meta
 http-equiv="Cache-Control"
 content="no-cache, no-store, must-revalidate"
@@ -24,150 +23,104 @@ content="0"
 >
  
 <title>Cadeira reservada</title>
+</head>
  
-<style>
-* {
-box-sizing: border-box;
-}
- 
-body {
+<body style="
 min-height: 100vh;
 margin: 0;
-padding: 35px 20px;
- 
+padding: 40px 20px;
+box-sizing: border-box;
 font-family: Arial, sans-serif;
 text-align: center;
- 
-background-color: #ffffff;
+background-color: white;
 color: #222222;
-}
+">
  
-.container {
+<main style="
 width: 100%;
 max-width: 650px;
 margin: 40px auto;
-}
+">
  
-h1 {
-margin: 0 0 30px;
+<h1 style="
+margin: 0 0 35px 0;
 font-size: 52px;
-}
+">
+⚠️ Aviso
+</h1>
  
-p {
-margin: 22px 0;
+<p style="
+margin: 25px 0;
 font-size: 34px;
 line-height: 1.4;
-}
+">
+Esta cadeira pertence a
+</p>
  
-.nome {
-margin: 28px 0;
+<div style="
+margin: 30px 0;
 font-size: 44px;
 font-weight: bold;
-}
- 
-.botoes {
-width: 100%;
-margin-top: 55px;
-}
- 
-button {
-display: block;
- 
-width: 100%;
-max-width: 420px;
-height: 110px;
- 
-margin-right: auto;
-margin-left: auto;
-padding: 20px 25px;
- 
-border: none;
-border-radius: 18px;
- 
-font-family: Arial, sans-serif;
-font-size: 32px;
-font-weight: bold;
-line-height: 1.2;
-color: #ffffff;
- 
-cursor: pointer;
-}
- 
-.assumir {
-background-color: #28a745;
-}
- 
-.cancelar {
-background-color: #dc3545;
-}
- 
-/* Espaço igual à altura de um botão */
-.espaco-entre-botoes {
-display: block;
-width: 100%;
-height: 110px;
-}
- 
-button:active {
-transform: scale(0.97);
-}
- 
-@media (max-width: 480px) {
-h1 {
-font-size: 46px;
-}
- 
-p {
-font-size: 30px;
-}
- 
-.nome {
-font-size: 40px;
-}
- 
-button {
-max-width: 380px;
-font-size: 29px;
-}
-}
-</style>
-</head>
- 
-<body>
- 
-<main class="container">
- 
-<h1>⚠️ Aviso</h1>
- 
-<p>Esta cadeira pertence a</p>
- 
-<div class="nome">
+">
 JOÃO CALDERAN
 </div>
  
-<p>
+<p style="
+margin: 25px 0;
+font-size: 34px;
+line-height: 1.4;
+">
 Deseja assumir o risco de utilizá-la?
 </p>
  
-<div class="botoes">
+<div style="
+width: 100%;
+margin-top: 60px;
+text-align: center;
+">
  
 <button
-class="assumir"
 type="button"
 onclick="assumirRisco()"
+style="
+display: block;
+width: 90%;
+max-width: 420px;
+height: 110px;
+margin: 0 auto 110px auto;
+padding: 20px;
+border: none;
+border-radius: 18px;
+background-color: #28a745;
+color: white;
+font-family: Arial, sans-serif;
+font-size: 30px;
+font-weight: bold;
+cursor: pointer;
+"
 >
 ✅ Assumir o risco
 </button>
  
-<div
-class="espaco-entre-botoes"
-aria-hidden="true"
-></div>
- 
 <button
-class="cancelar"
 type="button"
 onclick="naoPreparado()"
+style="
+display: block;
+width: 90%;
+max-width: 420px;
+height: 110px;
+margin: 0 auto;
+padding: 20px;
+border: none;
+border-radius: 18px;
+background-color: #dc3545;
+color: white;
+font-family: Arial, sans-serif;
+font-size: 30px;
+font-weight: bold;
+cursor: pointer;
+"
 >
 ❌ Não estou preparado
 </button>
@@ -178,19 +131,13 @@ onclick="naoPreparado()"
  
 <script>
 function assumirRisco() {
-const identificador = Date.now();
- 
-window.location.replace(
-"https://random.dog/?v=" + identificador
-);
+window.location.href =
+"https://random.dog/?v=" + Date.now();
 }
  
 function naoPreparado() {
-const identificador = Date.now();
- 
-window.location.replace(
-"https://cataas.com/cat?v=" + identificador
-);
+window.location.href =
+"https://cataas.com/cat?v=" + Date.now();
 }
 </script>
  
