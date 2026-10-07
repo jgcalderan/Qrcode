@@ -1,31 +1,37 @@
+HTML
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cadeira João Calderan</title>
+<title>Cadeira Reservada</title>
  
 <style>
+ 
 body{
 font-family: Arial, sans-serif;
 text-align:center;
-padding:40px 20px;
+margin-top:15vh;
+padding:20px;
 }
  
 h1{
-font-size:36px;
+font-size:48px;
+margin-bottom:30px;
 }
  
 p{
-font-size:22px;
+font-size:32px;
+line-height:1.5;
 }
  
 button{
-width:220px;
-padding:18px;
-margin:10px;
-font-size:22px;
+width:320px;
+height:90px;
+margin:15px;
 border:none;
-border-radius:10px;
+border-radius:16px;
+font-size:32px;
+font-weight:bold;
 color:white;
 cursor:pointer;
 }
@@ -37,6 +43,7 @@ background:#28a745;
 .cancelar{
 background:#dc3545;
 }
+ 
 </style>
 </head>
  
@@ -45,27 +52,34 @@ background:#dc3545;
 <h1>⚠️ Aviso</h1>
  
 <p>
-Esta cadeira pertence a João Calderan.
+Esta cadeira pertence a<br>
+<strong>João Calderan</strong>.
 </p>
  
 <p>
-Deseja agendar seu uso?
+Deseja assumir responsabilidade por ocupá-la?
 </p>
  
-<button class="agendar" onclick="pegadinha()">
+<button class="agendar" onclick="agendar()">
 ✅ Agendar
 </button>
  
 <br>
  
-<button class="cancelar" onclick="pegadinha()">
+<button class="cancelar" onclick="cancelar()">
 ❌ Cancelar
 </button>
  
 <script>
-function pegadinha(){
+ 
+function agendar(){
 window.location.href = "https://random.dog";
 }
+ 
+function cancelar(){
+window.location.href = "https://cataas.com/cat";
+}
+ 
 </script>
  
 </body>
