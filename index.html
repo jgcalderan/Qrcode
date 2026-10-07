@@ -1,44 +1,115 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
+ 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Cadeira Reservada</title>
-
-    <style>
-
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 40px 20px;
-            margin-top: 10vh;
-        }
-
-        h1 {
-            font-size: 52px;
-            margin-bottom: 40px;
-        }
-
-        p {
-            font-size: 34px;
-            line-height: 1.5;
-            margin: 25px 0;
-        }
-
-        .nome {
-            font-weight: bold;
-            font-size: 42px;
-        }
-
-        .botoes {
-            margin-top: 80px;
-        }
-
-        button {
-            width: 380px;
-            height: 110px;
-
-            border: none;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+<title>Cadeira Reservada</title>
+ 
+<style>
+ 
+body {
+font-family: Arial, sans-serif;
+text-align: center;
+padding: 40px 20px;
+margin-top: 10vh;
+}
+ 
+h1 {
+font-size: 52px;
+margin-bottom: 40px;
+}
+ 
+p {
+font-size: 34px;
+line-height: 1.5;
+margin: 25px 0;
+}
+ 
+.nome {
+font-weight: bold;
+font-size: 42px;
+}
+ 
+.botoes {
+margin-top: 80px;
+}
+ 
+button {
+width: 380px;
+height: 110px;
+ 
+border: none;
+border-radius: 18px;
+ 
+font-size: 34px;
+font-weight: bold;
+ 
+color: white;
+cursor: pointer;
+}
+ 
+.agendar {
+background-color: #28a745;
+margin-bottom: 80px;
+}
+ 
+.cancelar {
+background-color: #dc3545;
+}
+ 
+</style>
+ 
+</head>
+ 
+<body>
+ 
+<h1>⚠️ Aviso</h1>
+ 
+<p>
+Esta cadeira pertence a
+</p>
+ 
+<p class="nome">
+JOÃO CALDERAN
+</p>
+ 
+<p>
+Deseja assumir o risco de utilizá-la?
+</p>
+ 
+<div class="botoes">
+ 
+<button
+class="agendar"
+onclick="agendar()">
+✅ Assumir o risco
+</button>
+ 
+<br>
+ 
+<button
+class="cancelar"
+onclick="cancelar()">
+❌ Não estou preparado
+</button>
+ 
+</div>
+ 
+<script>
+ 
+function agendar() {
+window.location.href = "https://random.dog";
+}
+ 
+function cancelar() {
+window.location.href = "https://cataas.com/cat";
+}
+ 
+</script>
+ 
+</body>
+ 
+</html>
        
