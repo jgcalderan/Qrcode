@@ -1,136 +1,19 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
- 
-<head>
-<meta charset="UTF-8">
- 
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0"
->
- 
-<title>Cadeira reservada</title>
- 
-<style>
-* {
-box-sizing: border-box;
-}
- 
-body {
-min-height: 100vh;
-margin: 0;
-padding: 40px 20px;
- 
-display: flex;
-align-items: center;
-justify-content: center;
- 
-font-family: Arial, sans-serif;
-text-align: center;
- 
-background-color: #ffffff;
-color: #222222;
-}
- 
-.container {
-width: 100%;
-max-width: 600px;
-}
- 
-h1 {
-margin: 0 0 35px;
-font-size: 48px;
-}
- 
-p {
-margin: 25px 0;
-font-size: 32px;
-line-height: 1.4;
-}
- 
-.botoes {
-margin-top: 55px;
- 
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 35px;
-}
- 
-button {
-width: 100%;
-max-width: 380px;
-height: 105px;
- 
-border: none;
-border-radius: 18px;
- 
-font-size: 34px;
-font-weight: bold;
-color: white;
- 
-cursor: pointer;
-}
- 
-.agendar {
-background-color: #28a745;
-}
- 
-.cancelar {
-background-color: #dc3545;
-}
- 
-button:active {
-transform: scale(0.97);
-}
-</style>
-</head>
- 
-<body>
- 
-<main class="container">
- 
-<h1>⚠️ Aviso</h1>
- 
-<p>
-Esta cadeira pertence a<br>
-<strong>João Calderan</strong>.
-</p>
- 
-<p>
-Deseja assumir o risco de utilizá-la?
-</p>
- 
 <div class="botoes">
- 
-<button
-class="agendar"
-onclick="agendar()"
->
-✅ Agendar
-</button>
- 
-<button
-class="cancelar"
-onclick="cancelar()"
->
-❌ Cancelar
-</button>
- 
+
+    <button
+        class="agendar"
+        onclick="agendar()"
+    >
+        ✅ Agendar
+    </button>
+
+    <div style="height: 60px;"></div>
+
+    <button
+        class="cancelar"
+        onclick="cancelar()"
+    >
+        ❌ Cancelar
+    </button>
+
 </div>
- 
-</main>
- 
-<script>
-function agendar() {
-window.location.href = "https://random.dog";
-}
- 
-function cancelar() {
-window.location.href = "https://cataas.com/cat";
-}
-</script>
- 
-</body>
- 
-</html>
