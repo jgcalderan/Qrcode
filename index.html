@@ -1,53 +1,94 @@
-HTML
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
+ 
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cadeira Reservada</title>
+<meta charset="UTF-8">
+ 
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+ 
+<title>Cadeira reservada</title>
  
 <style>
+* {
+box-sizing: border-box;
+}
  
-body{
+body {
+min-height: 100vh;
+margin: 0;
+padding: 40px 20px;
+ 
+display: flex;
+align-items: center;
+justify-content: center;
+ 
 font-family: Arial, sans-serif;
-text-align:center;
-margin-top:15vh;
-padding:20px;
+text-align: center;
+ 
+background-color: #ffffff;
+color: #222222;
 }
  
-h1{
-font-size:48px;
-margin-bottom:30px;
+.container {
+width: 100%;
+max-width: 600px;
 }
  
-p{
-font-size:32px;
-line-height:1.5;
+h1 {
+margin: 0 0 35px;
+font-size: 48px;
 }
  
-button{
-width:320px;
-height:90px;
-margin:15px;
-border:none;
-border-radius:16px;
-font-size:32px;
-font-weight:bold;
-color:white;
-cursor:pointer;
+p {
+margin: 25px 0;
+font-size: 32px;
+line-height: 1.4;
 }
  
-.agendar{
-background:#28a745;
+.botoes {
+margin-top: 55px;
+ 
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 35px;
 }
  
-.cancelar{
-background:#dc3545;
+button {
+width: 100%;
+max-width: 380px;
+height: 105px;
+ 
+border: none;
+border-radius: 18px;
+ 
+font-size: 34px;
+font-weight: bold;
+color: white;
+ 
+cursor: pointer;
 }
  
+.agendar {
+background-color: #28a745;
+}
+ 
+.cancelar {
+background-color: #dc3545;
+}
+ 
+button:active {
+transform: scale(0.97);
+}
 </style>
 </head>
  
 <body>
+ 
+<main class="container">
  
 <h1>⚠️ Aviso</h1>
  
@@ -57,30 +98,39 @@ Esta cadeira pertence a<br>
 </p>
  
 <p>
-Deseja assumir responsabilidade por ocupá-la?
+Deseja assumir o risco de utilizá-la?
 </p>
  
-<button class="agendar" onclick="agendar()">
+<div class="botoes">
+ 
+<button
+class="agendar"
+onclick="agendar()"
+>
 ✅ Agendar
 </button>
  
-<br>
- 
-<button class="cancelar" onclick="cancelar()">
+<button
+class="cancelar"
+onclick="cancelar()"
+>
 ❌ Cancelar
 </button>
  
-<script>
+</div>
  
-function agendar(){
+</main>
+ 
+<script>
+function agendar() {
 window.location.href = "https://random.dog";
 }
  
-function cancelar(){
+function cancelar() {
 window.location.href = "https://cataas.com/cat";
 }
- 
 </script>
  
 </body>
+ 
 </html>
