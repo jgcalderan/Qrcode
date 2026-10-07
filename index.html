@@ -3,77 +3,147 @@
  
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
  
-<title>Cadeira Reservada</title>
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+ 
+<!-- Reduz o uso de versões antigas armazenadas pelo navegador -->
+<meta
+http-equiv="Cache-Control"
+content="no-cache, no-store, must-revalidate"
+>
+<meta
+http-equiv="Pragma"
+content="no-cache"
+>
+<meta
+http-equiv="Expires"
+content="0"
+>
+ 
+<title>Cadeira reservada</title>
  
 <style>
+* {
+box-sizing: border-box;
+}
  
 body {
+min-height: 100vh;
+margin: 0;
+padding: 35px 20px;
+ 
+display: flex;
+align-items: center;
+justify-content: center;
+ 
 font-family: Arial, sans-serif;
 text-align: center;
-padding: 40px 20px;
-margin-top: 10vh;
+ 
+background-color: #ffffff;
+color: #222222;
+}
+ 
+.container {
+width: 100%;
+max-width: 650px;
 }
  
 h1 {
+margin: 0 0 30px;
 font-size: 52px;
-margin-bottom: 40px;
 }
  
 p {
+margin: 22px 0;
 font-size: 34px;
-line-height: 1.5;
-margin: 25px 0;
+line-height: 1.4;
 }
  
 .nome {
+margin: 28px 0;
+font-size: 44px;
 font-weight: bold;
-font-size: 42px;
 }
  
 .botoes {
-margin-top: 80px;
+width: 100%;
+margin-top: 55px;
+ 
+display: flex;
+flex-direction: column;
+align-items: center;
+ 
+/* Espaço aproximado de uma linha */
+gap: 32px;
 }
  
 button {
-width: 380px;
-height: 110px;
+display: block;
+ 
+width: 100%;
+max-width: 420px;
+min-height: 110px;
+padding: 20px 25px;
  
 border: none;
 border-radius: 18px;
  
-font-size: 34px;
+font-family: Arial, sans-serif;
+font-size: 32px;
 font-weight: bold;
+line-height: 1.2;
+color: #ffffff;
  
-color: white;
 cursor: pointer;
 }
  
-.agendar {
+.assumir {
 background-color: #28a745;
-margin-bottom: 80px;
 }
  
 .cancelar {
 background-color: #dc3545;
 }
  
-</style>
+button:active {
+transform: scale(0.97);
+}
  
+@media (max-width: 480px) {
+h1 {
+font-size: 46px;
+}
+ 
+p {
+font-size: 30px;
+}
+ 
+.nome {
+font-size: 40px;
+}
+ 
+button {
+max-width: 380px;
+font-size: 29px;
+}
+}
+</style>
 </head>
  
 <body>
  
+<main class="container">
+ 
 <h1>⚠️ Aviso</h1>
  
-<p>
-Esta cadeira pertence a
-</p>
+<p>Esta cadeira pertence a</p>
  
-<p class="nome">
+<div class="nome">
 JOÃO CALDERAN
-</p>
+</div>
  
 <p>
 Deseja assumir o risco de utilizá-la?
@@ -82,34 +152,43 @@ Deseja assumir o risco de utilizá-la?
 <div class="botoes">
  
 <button
-class="agendar"
-onclick="agendar()">
+class="assumir"
+type="button"
+onclick="assumirRisco()"
+>
 ✅ Assumir o risco
 </button>
  
-<br>
- 
 <button
 class="cancelar"
-onclick="cancelar()">
+type="button"
+onclick="naoPreparado()"
+>
 ❌ Não estou preparado
 </button>
  
 </div>
  
+</main>
+ 
 <script>
+function assumirRisco() {
+const identificador = Date.now();
  
-function agendar() {
-window.location.href = "https://random.dog";
+window.location.replace(
+"https://random.dog/?v=" + identificador
+);
 }
  
-function cancelar() {
-window.location.href = "https://cataas.com/cat";
-}
+function naoPreparado() {
+const identificador = Date.now();
  
+window.location.replace(
+"https://cataas.com/cat?v=" + identificador
+);
+}
 </script>
  
 </body>
  
 </html>
-       
